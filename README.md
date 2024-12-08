@@ -20,10 +20,10 @@ gamified personal development application that combines elements of virtual pet 
 Carlos Arturo Araque Montoya
 
 ### 1.1.2 Project Name
-GrowgrEbuddy_PSA
+GrowEbuddy_PSA
 
 ### 1.1.3 Brief Project Description
-GrowgrEbuddy_PSA is a gamified personal development application that combines elements of virtual pet care, habit tracking, and mental wellness to help users improve their overall well-being.
+GrowEbuddy_PSA is a gamified personal development application that combines elements of virtual pet care, habit tracking, and mental wellness to help users improve their overall well-being.
 
 ### 1.1.4 Project Scope
 The current project scope focuses on implementing the following key features:
@@ -33,15 +33,16 @@ The current project scope focuses on implementing the following key features:
 - **User Progression**: A system that rewards users with daily login bonuses, streaks, and achievements.
 
 ### 1.1.5 Project URL
-www.growgrebuddy.com?
+www.growebuddy.com?
 
 ### 1.1.6 Repository URL or Compressed File
-[GrowgrEbuddy Play Systeme App](https://github.com/yaguarnecro/Growgrebuddy_PSA)
+
+[GrowEbuddy_PSA](https://github.com/yaguarnecro/GrowEbuddy_PSA)
 
 ## 1.2. Product Description
 
 ### 1.2.1 Objective
-The primary objectives of GrowgrEbuddy_PSA are:
+The primary objectives of GrowEbuddy_PSA are:
 1. To encourage users to engage in daily personal development activities.
 2. To promote mental wellness through guided exercises and reflection.
 3. To foster habit formation through gamification and rewards.
@@ -61,7 +62,7 @@ The primary objectives of GrowgrEbuddy_PSA are:
 2. **Mood Tracking and Guided Meditations**: Supports mental wellness through reflection and mindfulness exercises.
 
 ### 1.3. Design and User Experience
-The design of GrowgrEbuddy_PSA focuses on creating an engaging and intuitive user experience. Key design principles include:
+The design of GrowEbuddy_PSA focuses on creating an engaging and intuitive user experience. Key design principles include:
 
 - **Simplicity**: A clean and minimalist interface that is easy to navigate.
 - **Consistency**: Uniform design patterns and elements across the application, utilizing Vuetify components.
@@ -81,13 +82,12 @@ To set up the GrowgrEbuddy_PSA project locally, follow these steps:
   - **Node.js** (version X.X.X or higher)
   - **Python** (version X.X or higher)
   - **PostgreSQL** (version X.X or higher)
-  - **Docker** (optional, for containerization)
 
 #### Step 1: Clone the Repository
 Open your terminal and run the following command to clone the repository:
 
 ```bash
-git clone https://github.com/yaguarnecro/Growgrebuddy_PSA
+git clone https://github.com/yaguarnecro/GrowEbuddy_PSA.git
 ```
 
 ## 2. System Architecture
@@ -99,9 +99,8 @@ The architecture of GrowgrEbuddy_PSA consists of the following components:
 - **Backend**: Developed using Django, serving RESTful APIs to handle requests from the frontend.
 - **Database**: PostgreSQL is used for data storage, ensuring data integrity and reliability.
 - **Deployment**: The application is hosted on Heroku, allowing for easy scaling and management.
-- **Containerization**: Docker is utilized to ensure consistent environments across development, testing, and production.
 
-![Architecture Diagram](GrowEbuddy_PSA\docs\design\diagrams\information_architecture\architecture_diagram.mmd)  <!-- Replace with the actual path to your diagram -->
+![Architecture Diagram](GrowEbuddy_PSA/docs/design/diagrams/information_architecture/architecture_diagram.mmd)  <!-- Replace with the actual path to your diagram -->
 
 +-------------------+          +-------------------+
 |                   |          |                   |
@@ -124,8 +123,8 @@ The architecture of GrowgrEbuddy_PSA consists of the following components:
           v                             v
 +-------------------+          +-------------------+
 |                   |          |                   |
-|   PostgreSQL      | <------> |   Docker          |
-|   (Database)      |          |   (Containerization)|
+|   PostgreSQL      |          |                   |
+|   (Database)      |          |                   |
 |                   |          |                   |
 +-------------------+          +-------------------+
 
@@ -172,7 +171,7 @@ GrowEbuddy_PSA/
 │   ├── settings.py           # Django settings configuration
 │   └── ...
 ├── docs/                      # Documentation files
-│   ├── api/                  # API documentation
+│   ��── api/                  # API documentation
 │   ├── development/          # Development-related documents
 │   └── ...
 ├── tests/                     # Test cases for both frontend and backend
