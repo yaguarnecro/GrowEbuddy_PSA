@@ -90,6 +90,26 @@ Open your terminal and run the following command to clone the repository:
 git clone https://github.com/yaguarnecro/GrowEbuddy_PSA.git
 ```
 
+### Frontend Setup
+
+To set up the frontend, navigate to the root directory and create the Vue.js project:
+
+```bash
+cd C:\Users\yagua\AI4Devs\startOver1\AI4Devs-finalproject-CAAM\GrowEbuddy_PSA
+vue create frontend
+cd frontend
+vue add vuetify
+npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init -p
+```
+
+This will create a new Vue.js project with Vuetify and Tailwind CSS, and start the development server:
+```bash
+npm run serve
+```
+
+This will create a new Vue.js project with Vuetify and Tailwind CSS and start the development server.
+
 ## 2. System Architecture
 
 ### 2.1 Architecture Diagram
@@ -171,7 +191,7 @@ GrowEbuddy_PSA/
 │   ├── settings.py           # Django settings configuration
 │   └── ...
 ├── docs/                      # Documentation files
-│   ��── api/                  # API documentation
+│   ├── api/                  # API documentation
 │   ├── development/          # Development-related documents
 │   └── ...
 ├── tests/                     # Test cases for both frontend and backend
@@ -502,3 +522,13 @@ Please review the changes and provide feedback or approval for merging into the 
 
 ### Pull Request 3
 [Insert pull request details]
+
+### API Endpoints
+
+- **GET /api/hello/**: Returns a simple "Hello, World!" message.
+  - **Response**:
+    ```json
+    {
+      "message": "Hello, World!"
+    }
+    ```

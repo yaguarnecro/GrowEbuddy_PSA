@@ -21,6 +21,8 @@
   - Virtual mascot implementation
   - Basic game mechanics (EXP and Coins system)
   - Set up database and API structure
+  - Set up Vue.js frontend with Vuetify and Composition API
+  - Implement simple API endpoint for "Hello, World!"
 
 #### Week 5-6
 - [ ] Implement essential functionalities:
