@@ -1,0 +1,13 @@
+## Use Cases for Each View
+
+### Vpets
+- **View Vpets**: Users can view a list of all their virtual pets.
+- **Create Vpet**: Users can create a new virtual pet.
+
+### Notes
+- **View Notes**: Users can view all notes related to their personal development.
+- **Create Note**: Users can create a new note to track their thoughts or progress.
+
+### Challenges
+- **View Challenges**: Users can view all available challenges to participate in.
+- **Create Challenge**: Users can create a new challenge to encourage personal growth.

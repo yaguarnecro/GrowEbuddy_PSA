@@ -147,6 +147,12 @@ __pycache__/
 *.sqlite3
 *.log
 
+# Virtual Environment
+myvenv/
+venv/
+env/
+.env
+
 # Django
 /backend/__pycache__/
 /backend/*.pyc
@@ -156,3 +162,7 @@ __pycache__/
 /backend/media/
 /backend/staticfiles/
 /backend/.env
+
+# IDEs
+.idea/
+.vscode/

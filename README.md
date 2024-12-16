@@ -13,6 +13,9 @@ gamified personal development application that combines elements of virtual pet 
 6. [User Stories](#6-user-stories)
 7. [Work Tickets](#7-work-tickets)
 8. [Pull Requests](#8-pull-requests)
+9. [Installation Instructions](#9-installation-instructions)
+   - [Frontend Setup](#frontend-setup)
+   - [Backend and API Setup](#backend-and-api-setup)
 
 ## 1. Project Overview
 
@@ -95,20 +98,67 @@ git clone https://github.com/yaguarnecro/GrowEbuddy_PSA.git
 To set up the frontend, navigate to the root directory and create the Vue.js project:
 
 ```bash
-cd C:\Users\yagua\AI4Devs\startOver1\AI4Devs-finalproject-CAAM\GrowEbuddy_PSA
-vue create frontend
-cd frontend
-vue add vuetify
-npm install -D tailwindcss postcss autoprefixer
-npx tailwindcss init -p
+cd GrowEbuddy_PSA/frontend
+npm install  # or yarn install
+npm run dev  # or yarn dev
 ```
 
-This will create a new Vue.js project with Vuetify and Tailwind CSS, and start the development server:
-```bash
-npm run serve
-```
+Open your web browser and go to `http://127.0.0.1:4173/`. You should now see the content from the `HelloWorld` component rendered at the root path.
 
-This will create a new Vue.js project with Vuetify and Tailwind CSS and start the development server.
+### Backend and API Setup
+
+To set up the backend API for the GrowEbuddy_PSA project, follow these steps:
+
+1. **Navigate to the Backend Directory:**
+   ```bash
+   cd GrowEbuddy_PSA/backend/backendwithDjango
+   ```
+
+2. **Create a Virtual Environment:**
+   ```bash
+   python -m venv myvenv
+   source myvenv/bin/activate  # On Windows use: myvenv\Scripts\activate
+   ```
+
+3. **Install Dependencies:**
+   ```bash
+   cd ..\..
+   pip install -r requirements.txt
+   ```
+
+4. **Run Migrations**:
+   After configuring your database settings in `settings.py`, run the following command to apply migrations:
+
+   ```bash
+   cd backend/backendwithdjango
+   python manage.py migrate
+   ```
+
+   This command will create the necessary database tables. You should see a message indicating that there are no migrations to apply if everything is set up correctly.
+
+5. **Start the Development Server:**
+   ```bash
+   python manage.py runserver
+   ```
+
+6. **Access the API:**
+   The API will be accessible at `http://127.0.0.1:8000/api/`. Ensure to check the API documentation for available endpoints and usage.
+
+## API Endpoints
+
+The following API endpoints are available in the application:
+
+### Vpets
+- **GET** `/api/vpets/` - Retrieve a list of all Vpets.
+- **POST** `/api/vpets/` - Create a new Vpet.
+
+### Notes
+- **GET** `/api/notes/` - Retrieve a list of all notes.
+- **POST** `/api/notes/` - Create a new note.
+
+### Challenges
+- **GET** `/api/challenges/` - Retrieve a list of all challenges.
+- **POST** `/api/challenges/` - Create a new challenge.
 
 ## 2. System Architecture
 
