@@ -1,0 +1,24 @@
+# User Story Template
+
+## Title
+*As a [type of user], I want [some goal] so that [some reason].*
+
+## Acceptance Criteria
+- [ ] **Given** [context or precondition], **when** [action], **then** [expected outcome].
+- [ ] **Given** [context or precondition], **when** [action], **then** [expected outcome].
+- [ ] **Given** [context or precondition], **when** [action], **then** [expected outcome].
+
+## Description
+- **Who**: Describe the user persona (e.g., "As a new user...").
+- **What**: Explain what the user wants to achieve (e.g., "I want to create a new virtual pet...").
+- **Why**: State the benefit or value (e.g., "so that I can track my pet's progress...").
+
+## Additional Notes
+- Include any relevant information, constraints, or dependencies.
+- Mention any related user stories or tasks.
+
+## Mockups/Diagrams
+- Attach any relevant visual aids or links to designs.
+
+## References
+- Link to any relevant documentation or resources.
