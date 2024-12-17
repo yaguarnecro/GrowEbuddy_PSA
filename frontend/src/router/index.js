@@ -1,13 +1,13 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import HelloWorld from '../components/HelloWorld.vue'; // Adjust the path as necessary
+import HelloWorld from '../components/HelloWorld.vue';
 
 const routes = [
   {
     path: '/',
     name: 'Home',
-    component: HelloWorld, // This will render the HelloWorld component at the root path
+    component: HelloWorld, // This should render the HelloWorld component
   },
-  // You can add more routes here as needed
+  // Additional routes can be added here
 ];
 
 const router = createRouter({

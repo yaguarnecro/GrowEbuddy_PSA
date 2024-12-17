@@ -21,5 +21,5 @@ from django.urls import path, include  # Import include to reference app URLs
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/v1/', include(('main.urls', 'main'), namespace='main')),  # Corrected import path
+    path("", include("myapp.urls")),
 ]

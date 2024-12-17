@@ -17,7 +17,7 @@
   - [ ] Yes
   - [ ] No
         
-  ## *[Sub-Ticket Title]*
+  ## *[Sub-Ticket Title], [Sub-Ticket ID]*
   *-Description*  
   - [Briefly describe the purpose of the ticket and what needs to be accomplished.]
   *-Who is in charge*  

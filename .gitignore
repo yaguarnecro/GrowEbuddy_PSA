@@ -162,6 +162,8 @@ env/
 /backend/media/
 /backend/staticfiles/
 /backend/.env
+/media/
+/staticfiles/
 
 # IDEs
 .idea/

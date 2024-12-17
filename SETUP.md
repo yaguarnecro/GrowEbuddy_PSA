@@ -1,36 +1,101 @@
-# GrowEbuddy_PSA Setup Documentation
+# GrowEbuddy_PSA Setup Instructions
 
-## Overview
-This document outlines the steps taken to set up the GrowEbuddy_PSA project, a gamified personal development application that combines elements of virtual pet care, habit tracking, and mental wellness.
+## Prerequisites
 
-## Completed Steps
+Before you begin, ensure you have the following installed on your machine:
 
-1. **Installed Required Software**:
-   - Confirmed installation of Node.js, Python, and PostgreSQL.
+- **Python 3.8 or higher**: Download from [python.org](https://www.python.org/downloads/).
+- **PostgreSQL**: Download and install from [postgresql.org](https://www.postgresql.org/download/).
+- **pip**: Python package installer (comes with Python).
 
-2. **Cloned the Repository**:
-   - Cloned the project repository from GitHub to the local machine.
+## Clone the Repository
 
-3. **Set Up Environment Variables**:
-   - Created a `.env` file in the root directory with the following variables:
-     - `DATABASE_URL`
-     - `SECRET_KEY`
-     - `DEBUG`
-     - `ALLOWED_HOSTS`
+Clone the repository to your local machine using Git:
 
-4. **Tested Environment Variables**:
-   - Created a test script (`test_env.py`) to verify that the environment variables are loaded correctly.
+```bash
+git clone https://github.com/yourusername/GrowEbuddy_PSA.git
+cd GrowEbuddy_PSA
+```
 
-5. **Created `requirements.txt`**:
-   - Generated a `requirements.txt` file with essential Python packages for the backend.
+## Set Up a Virtual Environment
 
-6. **Created `package.json` for Vue.js**:
-   - Initialized a new Vue.js project and installed Vue.js and Vuetify.
+It is recommended to use a virtual environment to manage dependencies:
 
-7. **Updated Documentation**:
-   - Made necessary updates to `README.md` and `Plan_Development_Roadmap.md` to reflect the changes made during the setup process.
+```bash
+# Create a virtual environment
+python -m venv myvenv
 
-## Next Steps
-1. Set up the backend by creating the necessary folder structure and files.
-2. Update the `.gitignore` file to include relevant entries.
-3. Continue updating documentation as needed. 
+# Activate the virtual environment
+# On Windows
+myvenv\Scripts\activate
+# On macOS/Linux
+source myvenv/bin/activate
+```
+
+## Install Dependencies
+
+Install the required Python packages using pip:
+
+```bash
+pip install -r requirements.txt
+```
+
+If you don't have a `requirements.txt` file, you can manually install the necessary packages:
+
+```bash
+pip install django psycopg2 python-decouple dj-database-url
+```
+
+## Configure the Database
+
+1. **Create a PostgreSQL Database**:
+   - Open the PostgreSQL shell or pgAdmin and create a new database for the project.
+
+2. **Update Database Settings**:
+   - Open `backend/backendwithDjango/backendwithDjango/settings.py` and update the `DATABASES` section with your database name, username, and password.
+
+```python
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'your_database_name',  # Replace with your database name
+        'USER': 'your_username',        # Replace with your database username
+        'PASSWORD': 'your_password',    # Replace with your database password
+        'HOST': 'localhost',            # Set to 'localhost' or your database host
+        'PORT': '5432',                 # Default PostgreSQL port
+    }
+}
+```
+
+## Run Migrations
+
+Apply the database migrations to create the necessary tables:
+
+```bash
+python manage.py makemigrations
+python manage.py migrate
+```
+
+## Run the Development Server
+
+Start the Django development server:
+
+```bash
+python manage.py runserver
+```
+
+You can now access the application at `http://127.0.0.1:8000/`.
+
+## Additional Notes
+
+- To access the Django admin interface, create a superuser:
+
+```bash
+python manage.py createsuperuser
+```
+
+- Follow the prompts to set up your admin account.
+
+## Conclusion
+
+You are now set up to run the GrowEbuddy_PSA project! If you encounter any issues, please refer to the documentation or reach out for help.
